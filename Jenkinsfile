@@ -7,18 +7,7 @@ pipeline {
     }
 
     stages {
-            steps {
-                echo "Proceeding with build for branch: ${env.BRANCH_NAME}"
-            }
-        }
-
         stage('Restore') {
-            when {
-                expression {
-                    def branch = env.BRANCH_NAME
-                    return branch == 'main' || branch.startsWith('feature/')
-                }
-            }
             steps {
                 echo 'Restoring dependencies...'
                 sh 'dotnet restore'
@@ -26,12 +15,6 @@ pipeline {
         }
 
         stage('Build') {
-            when {
-                expression {
-                    def branch = env.BRANCH_NAME
-                    return branch == 'main' || branch.startsWith('feature/')
-                }
-            }
             steps {
                 echo 'Building the solution...'
                 sh 'dotnet build --no-restore'
@@ -39,12 +22,6 @@ pipeline {
         }
 
         stage('Rebuild') {
-            when {
-                expression {
-                    def branch = env.BRANCH_NAME
-                    return branch == 'main' || branch.startsWith('feature/')
-                }
-            }
             steps {
                 echo 'Rebuilding the solution...'
                 sh 'dotnet build --no-restore --no-incremental'
@@ -52,12 +29,6 @@ pipeline {
         }
 
         stage('Test') {
-            when {
-                expression {
-                    def branch = env.BRANCH_NAME
-                    return branch == 'main' || branch.startsWith('feature/')
-                }
-            }
             steps {
                 echo 'Running tests...'
                 sh 'dotnet test --no-build --verbosity normal'
@@ -67,13 +38,13 @@ pipeline {
 
     post {
         always {
-            echo "Pipeline completed for branch: ${env.BRANCH_NAME}"
+            echo 'Pipeline completed.'
         }
         success {
-            echo '✅ Build and tests succeeded!'
+            echo 'Build and tests succeeded!'
         }
         failure {
-            echo '❌ Pipeline failed. Please check the logs!'
+            echo 'Pipeline failed. Please check the logs!'
         }
     }
 }
