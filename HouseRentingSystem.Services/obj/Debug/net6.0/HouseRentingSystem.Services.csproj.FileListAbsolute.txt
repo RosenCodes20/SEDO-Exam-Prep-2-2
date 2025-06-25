@@ -1,0 +1,13 @@
+/Users/macbookpro16/Vs_code/exam_prep_2_seado/SEDO-Exam-Prep-2-2/HouseRentingSystem.Services/bin/Debug/net6.0/HouseRentingSystem.Services.deps.json
+/Users/macbookpro16/Vs_code/exam_prep_2_seado/SEDO-Exam-Prep-2-2/HouseRentingSystem.Services/bin/Debug/net6.0/HouseRentingSystem.Services.runtimeconfig.json
+/Users/macbookpro16/Vs_code/exam_prep_2_seado/SEDO-Exam-Prep-2-2/HouseRentingSystem.Services/bin/Debug/net6.0/HouseRentingSystem.Services.dll
+/Users/macbookpro16/Vs_code/exam_prep_2_seado/SEDO-Exam-Prep-2-2/HouseRentingSystem.Services/bin/Debug/net6.0/HouseRentingSystem.Services.pdb
+/Users/macbookpro16/Vs_code/exam_prep_2_seado/SEDO-Exam-Prep-2-2/HouseRentingSystem.Services/obj/Debug/net6.0/HouseRentingSystem.Services.csproj.AssemblyReference.cache
+/Users/macbookpro16/Vs_code/exam_prep_2_seado/SEDO-Exam-Prep-2-2/HouseRentingSystem.Services/obj/Debug/net6.0/HouseRentingSystem.Services.GeneratedMSBuildEditorConfig.editorconfig
+/Users/macbookpro16/Vs_code/exam_prep_2_seado/SEDO-Exam-Prep-2-2/HouseRentingSystem.Services/obj/Debug/net6.0/HouseRentingSystem.Services.AssemblyInfoInputs.cache
+/Users/macbookpro16/Vs_code/exam_prep_2_seado/SEDO-Exam-Prep-2-2/HouseRentingSystem.Services/obj/Debug/net6.0/HouseRentingSystem.Services.AssemblyInfo.cs
+/Users/macbookpro16/Vs_code/exam_prep_2_seado/SEDO-Exam-Prep-2-2/HouseRentingSystem.Services/obj/Debug/net6.0/HouseRentingSystem.Services.csproj.CoreCompileInputs.cache
+/Users/macbookpro16/Vs_code/exam_prep_2_seado/SEDO-Exam-Prep-2-2/HouseRentingSystem.Services/obj/Debug/net6.0/HouseRentingSystem.Services.sourcelink.json
+/Users/macbookpro16/Vs_code/exam_prep_2_seado/SEDO-Exam-Prep-2-2/HouseRentingSystem.Services/obj/Debug/net6.0/HouseRentingSystem.Services.dll
+/Users/macbookpro16/Vs_code/exam_prep_2_seado/SEDO-Exam-Prep-2-2/HouseRentingSystem.Services/obj/Debug/net6.0/HouseRentingSystem.Services.pdb
+/Users/macbookpro16/Vs_code/exam_prep_2_seado/SEDO-Exam-Prep-2-2/HouseRentingSystem.Services/obj/Debug/net6.0/HouseRentingSystem.Services.genruntimeconfig.cache
