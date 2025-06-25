@@ -7,11 +7,11 @@ name: .NET
 on:
   push:
     branches:
-      - deploy
+      - develop
       - feature/**
   pull_request:
     branches:
-      - deploy
+      - develop
       - feature/**
 
 jobs:
