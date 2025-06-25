@@ -6,7 +6,31 @@ pipeline {
         PATH = "${DOTNET_ROOT}:${PATH}"
     }
 
+    options {
+        skipDefaultCheckout()
+    }
+
     stages {
+        stage('Check Branch') {
+            steps {
+                script {
+                    def branch = env.BRANCH_NAME
+                    if (!(branch == 'main' || branch.startsWith('feature/'))) {
+                        echo "Skipping build for branch: ${branch}"
+                        // Exit pipeline early with SUCCESS status (no failure)
+                        currentBuild.result = 'NOT_BUILT'
+                        error("Branch ${branch} not built.")
+                    }
+                }
+            }
+        }
+
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
         stage('Restore') {
             steps {
                 echo 'Restoring dependencies...'
@@ -38,13 +62,17 @@ pipeline {
 
     post {
         always {
-            echo 'Pipeline completed.'
+            echo "Pipeline completed for branch: ${env.BRANCH_NAME}"
         }
         success {
-            echo 'Build and tests succeeded!'
+            echo '✅ Build and tests succeeded!'
         }
         failure {
-            echo 'Pipeline failed. Please check the logs!'
+            if (currentBuild.result == 'NOT_BUILT') {
+                echo "⚠️ Pipeline skipped for this branch."
+            } else {
+                echo '❌ Pipeline failed. Please check the logs.'
+            }
         }
     }
 }
