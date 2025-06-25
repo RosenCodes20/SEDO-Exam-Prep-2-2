@@ -7,13 +7,6 @@ pipeline {
     }
 
     stages {
-        stage('Skip Irrelevant Branches') {
-            when {
-                expression {
-                    def branch = env.BRANCH_NAME
-                    return branch == 'main' || branch.startsWith('feature/')
-                }
-            }
             steps {
                 echo "Proceeding with build for branch: ${env.BRANCH_NAME}"
             }
